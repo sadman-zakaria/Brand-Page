@@ -19,6 +19,24 @@ const testimonials = [
     message: "Loved the intuitive design and smooth animations. A+ experience!",
     image: "https://i.pravatar.cc/150?img=45",
   },
+  {
+    name: "Michael Lee",
+    role: "Product Manager, InnovateX",
+    message: "Incredible support and lightning-fast updates. Feels like a premium experience.",
+    image: "https://i.pravatar.cc/150?img=18",
+  },
+  {
+    name: "Sofia Kim",
+    role: "Freelancer",
+    message: "Clean code, modern design, and fantastic performance. I’m impressed!",
+    image: "https://i.pravatar.cc/150?img=27",
+  },
+  {
+    name: "Carlos Ruiz",
+    role: "CTO, TechBridge",
+    message: "Efficient, stylish, and easy to integrate. Our go-to choice from now on.",
+    image: "https://i.pravatar.cc/150?img=9",
+  },
 ];
 
 const cardVariants = {
@@ -26,21 +44,24 @@ const cardVariants = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.6 },
+    transition: { delay: i * 0.15, duration: 0.6 },
   }),
 };
 
 export default function TestimonialSection() {
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
-        <p className="text-gray-600 mb-12">Hear from some of our happy customers</p>
-        <div className="grid md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+          Hear from some of the people who love working with us
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, i) => (
             <motion.div
               key={i}
-              className="bg-white p-6 rounded-2xl shadow-md"
+              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow"
               custom={i}
               initial="hidden"
               whileInView="visible"
@@ -51,7 +72,7 @@ export default function TestimonialSection() {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-16 h-16 rounded-full mb-4"
+                  className="w-16 h-16 rounded-full mb-4 object-cover"
                 />
                 <h3 className="text-lg font-semibold">{testimonial.name}</h3>
                 <p className="text-sm text-gray-500 mb-2">{testimonial.role}</p>
