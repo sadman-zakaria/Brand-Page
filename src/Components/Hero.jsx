@@ -45,25 +45,25 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-evenly h-screen px-6">
+    <div className="max-w-[1440px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen px-6 py-10 gap-10">
       {/* Text Section */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center sm:text-left"
+        className="w-full lg:w-1/2 text-center lg:text-left"
       >
-        <h1 className="text-4xl md:text-7xl font-bold leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
           YOUR FEET <br /> DESERVE <br /> THE BEST
         </h1>
 
-        <p className="mt-6 text-gray-600 font-medium text-lg sm:text-xl">
-          YOUR FEET DESERVE THE BEST, AND WE'RE HERE TO <br />
+        <p className="mt-6 text-gray-400 font-medium text-lg sm:text-xl">
+          YOUR FEET DESERVE THE BEST, AND WE'RE HERE TO <br className="hidden sm:block" />
           HELP YOU WITH OUR SHOES.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-6">
+        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-6">
           <motion.button
             whileHover={{ scale: 1.1 }}
             className="bg-red-500 text-white font-bold text-lg px-6 py-3 rounded-lg hover:bg-red-400 transition"
@@ -73,18 +73,22 @@ const Hero = () => {
 
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="border border-gray-400 text-gray-700 font-bold text-lg px-6 py-3 rounded-lg bg-white hover:bg-gray-100 transition"
+            className="border border-gray-400 text-gray-200 font-bold text-lg px-6 py-3 rounded-lg bg-transparent hover:bg-white hover:text-black transition"
           >
             Category
           </motion.button>
         </div>
 
         {/* Available On */}
-        <div className="mt-6">
-          <p className="font-semibold text-gray-500">Also Available On</p>
-          <div className="flex items-center gap-4 mt-3">
-            <img src="flipkart.png" alt="Flipkart" className="h-8" />
-            <img src="amazon.png" alt="Amazon" className="h-8" />
+        <div className="mt-8">
+          <p className="font-semibold text-gray-400">Also Available On</p>
+          <div className="flex justify-center lg:justify-start items-center gap-4 mt-3">
+            <div className="bg-white p-2 rounded-md">
+              <img src="flipkart.png" alt="Flipkart" className="h-8 w-auto" />
+            </div>
+            <div className="bg-white p-2 rounded-md">
+              <img src="amazon.png" alt="Amazon" className="h-8 w-auto" />
+            </div>
           </div>
         </div>
       </motion.div>
@@ -96,10 +100,11 @@ const Hero = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="w-full max-w-md sm:max-w-lg mt-10 sm:mt-0"
+        className="w-full max-w-[500px] object-contain"
       />
     </div>
   );
 };
 
 export default Hero;
+
