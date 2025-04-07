@@ -2,6 +2,7 @@
 import './App.css'
 import Hero from './Components/Hero'
 import NavBar from './Components/NavBar'
+import TestimonialSection from './Components/testmonial'
 
 function App() {
   
@@ -10,6 +11,7 @@ function App() {
     <>
      <NavBar/>
      <Hero/>
+     <TestimonialSection/>
     </>
   )
 }
