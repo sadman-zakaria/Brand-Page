@@ -130,7 +130,7 @@ const NavBar = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="font-semibold hover:text-blue-800 transition-all duration-300"
+              className="font-semibold text-[#fb2c36] hover:text-blue-300 transition-all duration-300"
             >
               {item}
             </a>

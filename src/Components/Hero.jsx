@@ -53,7 +53,7 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="w-full lg:w-1/2 text-center lg:text-left"
       >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-[#fb2c36]">
           YOUR FEET <br /> DESERVE <br /> THE BEST
         </h1>
 
